@@ -1,8 +1,8 @@
 # Hi there, I'm Abishek Kishan A👋
 
-[![Instagram](https://img.shields.io/badge/Instagram-@ssj.ak_abishek-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/ssj.ak_abishek)
-
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Abishek%20Kishan-blue?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abishek-kishan/)
+
+[![Instagram](https://img.shields.io/badge/Instagram-@ssj.ak_abishek-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/ssj.ak_abishek)
 
 
 ## 🚀 About Me
