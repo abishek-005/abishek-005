@@ -12,12 +12,11 @@
 
 
 ## 🚀 About Me
-- I am someone who enjoys exploring how things are happening behind the scenes especially in the world of AI and Coding 
+- Curious about how AI systems actually work under the hood, I enjoy exploring the internal logic behind coding and intelligent systems.
 
-- 🛠️I’m currently experimenting with building my own AI systems from scratch, using Python, Machine Learning, Deep Learning, and NLP, mostly with TensorFlow and Keras. 
+- 🛠️ I’m actively experimenting with creating AI models from scratch using Python, ML, DL, and NLP, with hands-on experience in TensorFlow and Keras.
 
-- I enjoy breaking concepts down, understanding the logic behind them, and then rebuilding things in my own way.I’m still learning and working on personal projects that help me grow as a Machine Learning Engineer / Data Analyst.
-
+- I focus on understanding concepts deeply, simplifying them, and applying that knowledge through personal projects that push me forward in the AI/ML domain.
 
 ## 🛠️ Languages and Tools
 
