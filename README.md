@@ -1,12 +1,17 @@
 # Hi there, I'm Abishek Kishan A👋
 
+
+<!--<img align="right" src="https://user-images.githubusercontent.com/74038190/212750680-266fa8aa-39f1-4e8b-8873-7181dbaf3d7c.gif" width="300"/>-->
+
+
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Abishek%20Kishan-blue?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abishek-kishan/)
 
 [![Instagram](https://img.shields.io/badge/Instagram-@ssj.ak_abishek-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/ssj.ak_abishek)
 
+[![Gmail](https://img.shields.io/badge/Gmail-ak.abishek005@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ak.abishek005@gmail.com)
+
 
 ## 🚀 About Me
-
 - I am someone who enjoys exploring how things are happening behind the scenes especially in the world of AI and Coding 
 
 - 🛠️I’m currently experimenting with building my own AI systems from scratch, using Python, Machine Learning, Deep Learning, and NLP, mostly with TensorFlow and Keras. 
@@ -18,7 +23,7 @@
 
 <p align="left">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=py,js,ts,html,css,nodejs,flask,cpp,dart,flutter,firebase,git,github,vscode,figma,perline=10" />
+    <img src="https://skillicons.dev/icons?i=py,js,ts,html,css,nodejs,flask,cpp,tensorflow,keras,dart,flutter,firebase,git,github,vscode,figma,perline=10" />
   </a>
 </p>
 <!--
