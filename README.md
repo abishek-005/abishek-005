@@ -13,9 +13,6 @@
 
 - I enjoy breaking concepts down, understanding the logic behind them, and then rebuilding things in my own way.I’m still learning and working on personal projects that help me grow as a Machine Learning Engineer / Data Analyst.
 
-- I like more about exploring, testing ideas, and learning through trial and error as well as hate it 😅
-
-- I tend to overthink — but in a good way. I like considering different scenarios, edge cases, and possibilities before implementing a solution. That mindset helps me write code that’s more flexible and thought-out.
 
 ## 🛠️ Languages and Tools
 
