@@ -2,7 +2,8 @@
 
 [![Instagram](https://img.shields.io/badge/Instagram-@ssj.ak_abishek-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/ssj.ak_abishek)
 
-[![Linkedin: Abishek kishan](https://img.shields.io/badge/-Abishek-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/Abishek-kishan/)](https://www.linkedin.com/in/abishek-kishan/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Abishek%20Kishan-blue?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abishek-kishan/)
+
 
 ## 🚀 About Me
 
