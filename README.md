@@ -14,7 +14,7 @@
 ## 🚀 About Me
 - Curious about how AI systems actually work under the hood, I enjoy exploring the internal logic behind coding and intelligent systems.
 
-- 🛠️ I’m actively experimenting with creating AI models from scratch using Python, ML, DL, and NLP, with hands-on experience in TensorFlow and Keras.
+- I’m actively experimenting with creating AI models from scratch using Python, ML, DL, and NLP, with hands-on experience in TensorFlow and Keras.
 
 - I focus on understanding concepts deeply, simplifying them, and applying that knowledge through personal projects that push me forward in the AI/ML domain.
 
