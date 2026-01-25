@@ -19,16 +19,15 @@
 
 <p align="left">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=py,js,ts,react,nextjs,html,css,nodejs,express,django,flask,c,cpp,java,kotlin,swift,dart,flutter,firebase,aws,gcp,docker,kubernetes,linux,git,github,vscode,figma,ps,ai&perline=10" />
+    <img src="https://skillicons.dev/icons?i=py,js,ts,html,css,nodejs,flask,cpp,java,dart,flutter,firebase,git,github,vscode,figma,perline=10" />
   </a>
 </p>
-
+<!--
 ### Other Badges style
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-
+-->
 ## 📈 GitHub Stats
 
 <div align="center">
