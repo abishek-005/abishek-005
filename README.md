@@ -1,7 +1,7 @@
-# Hi there, I'm Abishek Kishan A👋
+# Hi there, I'm Abishek Kishan A 👋
 
+### 🧠 Transforming Data into Decisions | AI & ML Enthusiast
 
-<!--<img align="right" src="https://user-images.githubusercontent.com/74038190/212750680-266fa8aa-39f1-4e8b-8873-7181dbaf3d7c.gif" width="300"/>-->
 
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Abishek%20Kishan-blue?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abishek-kishan/)
@@ -11,52 +11,67 @@
 [![Gmail](https://img.shields.io/badge/Gmail-ak.abishek005@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ak.abishek005@gmail.com)
 
 
+
 ## 🚀 About Me
-- Curious about how AI systems actually work under the hood, I enjoy exploring the internal logic behind coding and intelligent systems.
 
-- I’m actively experimenting with creating AI models from scratch using Python, ML, DL, and NLP, with hands-on experience in TensorFlow and Keras.
 
-- I focus on understanding concepts deeply, simplifying them, and applying that knowledge through personal projects that push me forward in the AI/ML domain.
 
-## 🛠️ Languages and Tools
+- **`model.compile(optimizer='curiosity')`** 🔍  
+
+  I dive deep into the architecture of Intelligent Systems, exploring how neural networks and algorithms actually function under the hood rather than just treating them as black boxes.
+
+
+
+- **`model.fit(skills)`** 💻  
+
+  Actively training my brain and building AI models from scratch. Proficient in Python, Deep Learning, and NLP, with hands-on experience using TensorFlow and Keras.
+
+
+
+- **`model.predict(future)`** 🚀  
+
+  Focused on bridging the gap between core AI and functional applications (sometimes wrapping them up with Flutter!). I love simplifying complex tech and deploying it into real-world projects and ventures.
+
+
+
+## 🛠️ Languages & Tools
+
+
 
 <p align="left">
+
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=py,js,ts,html,css,nodejs,flask,cpp,tensorflow,keras,dart,flutter,firebase,git,github,vscode,figma,perline=10" />
+
+    <img src="https://skillicons.dev/icons?i=py,js,ts,html,css,nodejs,flask,cpp,tensorflow,keras,dart,flutter,firebase,git,github,vscode,figma&perline=10" />
+
   </a>
+
 </p>
-<!--
-### Other Badges style
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
--->
-##  📈 GitHub Stats
+
+
+
+## 📈 GitHub Stats
+
+
 
 <div align="center">
+
+
 
 [![Abishek's GitHub stats](https://github-readme-stats.vercel.app/api?username=abishek-005&show_icons=true&theme=radical)](https://github.com/abishek-005)
 
 
+
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=abishek-005&layout=compact&theme=radical)](https://github.com/anuraghazra/github-readme-stats)
+
+
 
 </div>
 
+
+
 ### 🔥 Streak Stats
 
-[![GitHub Streak](https://streak-stats.demolab.com?user=abishek-005&theme=radical)](https://git.io/streak-stats)
 
-<!--
-**<your_username>/<your_username>** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+[![GitHub Streak](https://streak-stats.demolab.com?user=abishek-005&theme=radical)](https://git.io/streak-stats) 
