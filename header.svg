@@ -1,0 +1,192 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="var(--bg-gradient-start)" />
+      <stop offset="100%" stop-color="var(--bg-gradient-end)" />
+    </linearGradient>
+    <linearGradient id="text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="var(--accent-primary)" />
+      <stop offset="100%" stop-color="var(--accent-secondary)" />
+    </linearGradient>
+    
+    <!-- Glow Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    :root {
+      --bg-gradient-start: #070913;
+      --bg-gradient-end: #0c1020;
+      --text-primary: #ffffff;
+      --text-secondary: #8b98b5;
+      --stroke-color: rgba(99, 102, 241, 0.08);
+      --dot-color: rgba(99, 102, 241, 0.2);
+      --accent-primary: #a855f7;
+      --accent-secondary: #06b6d4;
+      --glow-intensity: 0.6;
+    }
+    
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg-gradient-start: #f8fafc;
+        --bg-gradient-end: #e2e8f0;
+        --text-primary: #0f172a;
+        --text-secondary: #475569;
+        --stroke-color: rgba(99, 102, 241, 0.1);
+        --dot-color: rgba(99, 102, 241, 0.3);
+        --accent-primary: #7c3aed;
+        --accent-secondary: #0891b2;
+        --glow-intensity: 0.2;
+      }
+    }
+
+    /* Background Rect */
+    .bg {
+      fill: url(#bg-grad);
+    }
+
+    /* Typography styling */
+    .title-text {
+      font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 32px;
+      fill: var(--text-primary);
+      opacity: 0;
+      transform: translateY(15px);
+      animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      animation-delay: 0.2s;
+    }
+
+    .subtitle-text {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      fill: var(--text-secondary);
+      opacity: 0;
+      transform: translateY(10px);
+      animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      animation-delay: 0.8s;
+    }
+
+    .highlight-name {
+      fill: url(#text-grad);
+      filter: drop-shadow(0 2px 8px rgba(168, 85, 247, var(--glow-intensity)));
+    }
+
+    /* Decorative Floating Elements (AI Nodes) */
+    .net-line {
+      stroke: var(--stroke-color);
+      stroke-width: 1.5;
+      stroke-dasharray: 6 4;
+      animation: dashOffset 40s linear infinite;
+    }
+
+    .net-dot {
+      fill: var(--dot-color);
+    }
+
+    .pulse-dot {
+      fill: var(--accent-primary);
+      animation: pulseGlow 4s ease-in-out infinite;
+    }
+
+    .pulse-dot-cyan {
+      fill: var(--accent-secondary);
+      animation: pulseGlow 5s ease-in-out infinite;
+      animation-delay: 1.5s;
+    }
+
+    /* Keyframe Animations */
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes dashOffset {
+      to {
+        stroke-dashoffset: -1000;
+      }
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% {
+        r: 3px;
+        opacity: 0.4;
+        filter: none;
+      }
+      50% {
+        r: 7px;
+        opacity: 1;
+        filter: url(#glow);
+      }
+    }
+
+    /* Interactive style floating particles */
+    .particle {
+      animation: floatAround 12s ease-in-out infinite alternate;
+    }
+    
+    @keyframes floatAround {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(15px, -15px); }
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" class="bg" rx="15" />
+
+  <!-- Animated Neural Net Mesh in Background -->
+  <g opacity="0.6">
+    <!-- Synaptic connections -->
+    <line x1="80" y1="40" x2="200" y2="70" class="net-line" />
+    <line x1="200" y1="70" x2="150" y2="160" class="net-line" />
+    <line x1="150" y1="160" x2="80" y2="40" class="net-line" />
+    <line x1="200" y1="70" x2="310" y2="50" class="net-line" />
+    <line x1="310" y1="50" x2="340" y2="150" class="net-line" />
+    
+    <line x1="550" y1="30" x2="680" y2="60" class="net-line" />
+    <line x1="680" y1="60" x2="720" y2="140" class="net-line" />
+    <line x1="720" y1="140" x2="600" y2="170" class="net-line" />
+    <line x1="600" y1="170" x2="550" y2="30" class="net-line" />
+    <line x1="680" y1="60" x2="600" y2="170" class="net-line" />
+
+    <!-- Static background dots -->
+    <circle cx="80" cy="40" r="4" class="net-dot" />
+    <circle cx="150" cy="160" r="4" class="net-dot" />
+    <circle cx="310" cy="50" r="4" class="net-dot" />
+    <circle cx="340" cy="150" r="4" class="net-dot" />
+    <circle cx="550" cy="30" r="4" class="net-dot" />
+    <circle cx="720" cy="140" r="4" class="net-dot" />
+
+    <!-- Animated pulsing neurons (violet) -->
+    <circle cx="200" cy="70" r="4" class="pulse-dot" />
+    <circle cx="600" cy="170" r="4" class="pulse-dot" />
+
+    <!-- Animated pulsing neurons (cyan) -->
+    <circle cx="680" cy="60" r="3" class="pulse-dot-cyan" />
+  </g>
+
+  <!-- Title and Subtitle Text -->
+  <g transform="translate(60, 85)">
+    <text class="title-text">Hi there, I'm <tspan class="highlight-name">Abishek Kishan A</tspan> 👋</text>
+  </g>
+  <g transform="translate(60, 125)">
+    <text class="subtitle-text">Transforming Data into Decisions | AI &amp; ML Enthusiast</text>
+  </g>
+
+  <!-- Interactive visual floating nodes on the right -->
+  <g class="particle" opacity="0.8">
+    <circle cx="710" cy="50" r="3" fill="var(--accent-secondary)" opacity="0.5" />
+    <circle cx="730" cy="110" r="2" fill="var(--accent-primary)" opacity="0.6" />
+    <circle cx="750" cy="70" r="4" fill="var(--accent-secondary)" opacity="0.3" />
+  </g>
+</svg>

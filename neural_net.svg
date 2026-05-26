@@ -1,0 +1,308 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="net-bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="var(--bg-gradient-start)" />
+      <stop offset="100%" stop-color="var(--bg-gradient-end)" />
+    </linearGradient>
+
+    <!-- Node Glow Filter -->
+    <filter id="glow-filter" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Linear Gradients for Synapses (Data flow direction color) -->
+    <linearGradient id="syn-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="var(--accent-primary)" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="var(--accent-secondary)" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    :root {
+      --bg-gradient-start: #070913;
+      --bg-gradient-end: #0c1020;
+      --text-main: #ffffff;
+      --text-muted: #8b98b5;
+      --accent-primary: #a855f7;
+      --accent-secondary: #06b6d4;
+      
+      --node-in: #a855f7;
+      --node-hidden: #6366f1;
+      --node-out: #06b6d4;
+      --synapse-color: rgba(99, 102, 241, 0.15);
+      
+      --glow-intensity: 0.6;
+    }
+    
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg-gradient-start: #f8fafc;
+        --bg-gradient-end: #e2e8f0;
+        --text-main: #0f172a;
+        --text-muted: #475569;
+        --accent-primary: #7c3aed;
+        --accent-secondary: #0891b2;
+        
+        --node-in: #7c3aed;
+        --node-hidden: #4f46e5;
+        --node-out: #0891b2;
+        --synapse-color: rgba(99, 102, 241, 0.2);
+        
+        --glow-intensity: 0.2;
+      }
+    }
+
+    .bg {
+      fill: url(#net-bg-grad);
+    }
+
+    /* Synapse lines */
+    .synapse {
+      stroke: var(--synapse-color);
+      stroke-width: 1.5;
+      fill: none;
+    }
+
+    .synapse-active {
+      stroke: url(#syn-grad);
+      stroke-width: 2;
+      fill: none;
+      stroke-dasharray: 4 6;
+      animation: dashMove 20s linear infinite;
+    }
+
+    @keyframes dashMove {
+      to {
+        stroke-dashoffset: -200;
+      }
+    }
+
+    /* Nodes styling */
+    .node {
+      stroke: var(--bg-gradient-end);
+      stroke-width: 2px;
+      transition: transform 0.3s;
+    }
+    .node:hover {
+      transform: scale(1.2);
+    }
+
+    .node-in { fill: var(--node-in); }
+    .node-hidden { fill: var(--node-hidden); }
+    .node-out { fill: var(--node-out); }
+
+    /* Pulsing Nodes */
+    .pulse {
+      animation: nodePulse 3s infinite ease-in-out;
+    }
+    
+    @keyframes nodePulse {
+      0%, 100% {
+        transform: scale(1);
+        filter: none;
+      }
+      50% {
+        transform: scale(1.15);
+        filter: url(#glow-filter);
+      }
+    }
+
+    /* Labels styling */
+    .label {
+      font-family: 'Inter', -apple-system, system-ui, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      fill: var(--text-muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .code-label {
+      font-family: 'Fira Code', 'Courier New', Courier, monospace;
+      font-size: 12px;
+      fill: var(--text-main);
+      font-weight: bold;
+    }
+
+    .flow-particle {
+      filter: url(#glow-filter);
+    }
+  </style>
+
+  <!-- Background Canvas -->
+  <rect width="100%" height="100%" class="bg" rx="15" />
+
+  <!-- Grid Pattern Overlay for Tech feel -->
+  <g opacity="0.05">
+    <path d="M 0 40 L 800 40 M 0 80 L 800 80 M 0 120 L 800 120 M 0 160 L 800 160 M 0 200 L 800 200 M 0 240 L 800 240" stroke="var(--text-main)" stroke-width="1"/>
+    <path d="M 80 0 L 80 280 M 160 0 L 160 280 M 240 0 L 240 280 M 320 0 L 320 280 M 400 0 L 400 280 M 480 0 L 480 280 M 560 0 L 560 280 M 640 0 L 640 280 M 720 0 L 720 280" stroke="var(--text-main)" stroke-width="1"/>
+  </g>
+
+  <!-- SYNAPSES (CONNECTIONS) -->
+  <g>
+    <!-- Input to Hidden 1 -->
+    <!-- In-1 connections -->
+    <line x1="160" y1="80" x2="320" y2="60" class="synapse" />
+    <line x1="160" y1="80" x2="320" y2="110" class="synapse" />
+    <line x1="160" y1="80" x2="320" y2="160" class="synapse" />
+    <line x1="160" y1="80" x2="320" y2="210" class="synapse" />
+    
+    <!-- In-2 connections -->
+    <line x1="160" y1="145" x2="320" y2="60" class="synapse" />
+    <line x1="160" y1="145" x2="320" y2="110" class="synapse-active" />
+    <line x1="160" y1="145" x2="320" y2="160" class="synapse-active" />
+    <line x1="160" y1="145" x2="320" y2="210" class="synapse" />
+
+    <!-- In-3 connections -->
+    <line x1="160" y1="210" x2="320" y2="60" class="synapse" />
+    <line x1="160" y1="210" x2="320" y2="110" class="synapse" />
+    <line x1="160" y1="210" x2="320" y2="160" class="synapse" />
+    <line x1="160" y1="210" x2="320" y2="210" class="synapse" />
+
+    <!-- Hidden 1 to Hidden 2 -->
+    <!-- H1-1 connections -->
+    <line x1="320" y1="60" x2="480" y2="60" class="synapse-active" />
+    <line x1="320" y1="60" x2="480" y2="110" class="synapse" />
+    <line x1="320" y1="60" x2="480" y2="160" class="synapse" />
+    
+    <!-- H1-2 connections -->
+    <line x1="320" y1="110" x2="480" y2="60" class="synapse" />
+    <line x1="320" y1="110" x2="480" y2="110" class="synapse" />
+    <line x1="320" y1="110" x2="480" y2="160" class="synapse" />
+    <line x1="320" y1="110" x2="480" y2="210" class="synapse" />
+
+    <!-- H1-3 connections -->
+    <line x1="320" y1="160" x2="480" y2="60" class="synapse" />
+    <line x1="320" y1="160" x2="480" y2="110" class="synapse" />
+    <line x1="320" y1="160" x2="480" y2="160" class="synapse" />
+    <line x1="320" y1="160" x2="480" y2="210" class="synapse-active" />
+
+    <!-- H1-4 connections -->
+    <line x1="320" y1="210" x2="480" y2="110" class="synapse" />
+    <line x1="320" y1="210" x2="480" y2="160" class="synapse" />
+    <line x1="320" y1="210" x2="480" y2="210" class="synapse" />
+
+    <!-- Hidden 2 to Output -->
+    <!-- H2-1 connections -->
+    <line x1="480" y1="60" x2="640" y2="110" class="synapse-active" />
+    <line x1="480" y1="60" x2="640" y2="180" class="synapse" />
+
+    <!-- H2-2 connections -->
+    <line x1="480" y1="110" x2="640" y2="110" class="synapse" />
+    <line x1="480" y1="110" x2="640" y2="180" class="synapse" />
+
+    <!-- H2-3 connections -->
+    <line x1="480" y1="160" x2="640" y2="110" class="synapse" />
+    <line x1="480" y1="160" x2="640" y2="180" class="synapse-active" />
+
+    <!-- H2-4 connections -->
+    <line x1="480" y1="210" x2="640" y2="110" class="synapse" />
+    <line x1="480" y1="210" x2="640" y2="180" class="synapse" />
+  </g>
+
+  <!-- HIDDEN SIGNAL FLOW PATHS (For animated particles using SMIL) -->
+  <g>
+    <!-- Path 1: In-2 to H1-2 -->
+    <path id="flow-in2-h12" d="M 160 145 L 320 110" stroke="none" fill="none" />
+    <circle r="3.5" fill="var(--accent-secondary)" class="flow-particle">
+      <animateMotion dur="2.4s" repeatCount="indefinite">
+        <mpath href="#flow-in2-h12"/>
+      </animateMotion>
+    </circle>
+
+    <!-- Path 2: In-2 to H1-3 -->
+    <path id="flow-in2-h13" d="M 160 145 L 320 160" stroke="none" fill="none" />
+    <circle r="3.5" fill="var(--accent-secondary)" class="flow-particle">
+      <animateMotion dur="2.4s" begin="0.8s" repeatCount="indefinite">
+        <mpath href="#flow-in2-h13"/>
+      </animateMotion>
+    </circle>
+
+    <!-- Path 3: H1-1 to H2-1 -->
+    <path id="flow-h11-h21" d="M 320 60 L 480 60" stroke="none" fill="none" />
+    <circle r="3.5" fill="var(--accent-primary)" class="flow-particle">
+      <animateMotion dur="1.8s" begin="0.4s" repeatCount="indefinite">
+        <mpath href="#flow-h11-h21"/>
+      </animateMotion>
+    </circle>
+
+    <!-- Path 4: H1-3 to H2-4 -->
+    <path id="flow-h13-h24" d="M 320 160 L 480 210" stroke="none" fill="none" />
+    <circle r="3.5" fill="var(--accent-primary)" class="flow-particle">
+      <animateMotion dur="2.2s" begin="1.2s" repeatCount="indefinite">
+        <mpath href="#flow-h13-h24"/>
+      </animateMotion>
+    </circle>
+
+    <!-- Path 5: H2-1 to Out-1 -->
+    <path id="flow-h21-out1" d="M 480 60 L 640 110" stroke="none" fill="none" />
+    <circle r="4" fill="var(--node-out)" class="flow-particle">
+      <animateMotion dur="1.6s" begin="0.9s" repeatCount="indefinite">
+        <mpath href="#flow-h21-out1"/>
+      </animateMotion>
+    </circle>
+
+    <!-- Path 6: H2-3 to Out-2 -->
+    <path id="flow-h23-out2" d="M 480 160 L 640 180" stroke="none" fill="none" />
+    <circle r="4" fill="var(--node-out)" class="flow-particle">
+      <animateMotion dur="1.6s" begin="0.2s" repeatCount="indefinite">
+        <mpath href="#flow-h23-out2"/>
+      </animateMotion>
+    </circle>
+  </g>
+
+  <!-- NEURAL NODES (LAYERS) -->
+  <g>
+    <!-- INPUT LAYER -->
+    <g class="pulse" style="animation-delay: 0s;">
+      <circle cx="160" cy="80" r="8" class="node node-in" />
+      <circle cx="160" cy="145" r="8" class="node node-in" />
+      <circle cx="160" cy="210" r="8" class="node node-in" />
+    </g>
+
+    <!-- HIDDEN LAYER 1 -->
+    <g class="pulse" style="animation-delay: 0.5s;">
+      <circle cx="320" cy="60" r="7" class="node node-hidden" />
+      <circle cx="320" cy="110" r="7" class="node node-hidden" />
+      <circle cx="320" cy="160" r="7" class="node node-hidden" />
+      <circle cx="320" cy="210" r="7" class="node node-hidden" />
+    </g>
+
+    <!-- HIDDEN LAYER 2 -->
+    <g class="pulse" style="animation-delay: 1s;">
+      <circle cx="480" cy="60" r="7" class="node node-hidden" />
+      <circle cx="480" cy="110" r="7" class="node node-hidden" />
+      <circle cx="480" cy="160" r="7" class="node node-hidden" />
+      <circle cx="480" cy="210" r="7" class="node node-hidden" />
+    </g>
+
+    <!-- OUTPUT LAYER -->
+    <g class="pulse" style="animation-delay: 1.5s;">
+      <circle cx="640" cy="110" r="9" class="node node-out" />
+      <circle cx="640" cy="180" r="9" class="node node-out" />
+    </g>
+  </g>
+
+  <!-- LABELS & TEXT -->
+  <g>
+    <!-- Column Titles -->
+    <text x="160" y="35" text-anchor="middle" class="label">Input</text>
+    <text x="400" y="35" text-anchor="middle" class="label">Hidden Layers</text>
+    <text x="640" y="35" text-anchor="middle" class="label">Output</text>
+
+    <!-- Code Block Labels aligned with user readme concept -->
+    <!-- Input label -->
+    <text x="65" y="150" text-anchor="end" class="code-label">compile()</text>
+    
+    <!-- Hidden label -->
+    <text x="400" y="255" text-anchor="middle" class="code-label" fill="var(--accent-primary)">fit(skills)</text>
+    
+    <!-- Output label -->
+    <text x="735" y="150" text-anchor="start" class="code-label">predict()</text>
+  </g>
+</svg>
