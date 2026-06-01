@@ -50,19 +50,6 @@
 ## 📈 GitHub Metrics
 
 <table align="center" border="0" cellpadding="0" cellspacing="0">
-  <tr>
-    <td valign="top" width="50%">
-      <a href="https://github.com/abishek-005">
-        <img src="https://github-readme-stats.vercel.app/api?username=abishek-005&show_icons=true&theme=radical&hide_border=true" width="100%" alt="Abishek's GitHub stats" />
-      </a>
-    </td>
-    <td valign="top" width="50%">
-      <a href="https://github.com/anuraghazra/github-readme-stats">
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=abishek-005&layout=compact&theme=radical&hide_border=true" width="100%" alt="Top Langs" />
-      </a>
-    </td>
-  </tr>
-  <tr>
     <td colspan="2" align="center" valign="top">
       <br />
       <a href="https://git.io/streak-stats">
