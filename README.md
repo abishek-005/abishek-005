@@ -1,9 +1,7 @@
-<!-- ANIMATED HEADER -->
 <p align="center">
   <img src="header.svg" width="100%" alt="Hi there, I'm Abishek Kishan A 👋" />
 </p>
 
-<!-- SOCIAL BADGES -->
 <p align="center">
   <a href="https://www.linkedin.com/in/abishek-kishan/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-Abishek%20Kishan-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
@@ -60,8 +58,6 @@
 </table>
 
 ---
-
-<!-- ANIMATED FOOTER -->
 <p align="center">
   <img src="footer.svg" width="100%" alt="Footer Wave Divider" />
 </p>
