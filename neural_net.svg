@@ -2,207 +2,170 @@
   <defs>
     <!-- Background Gradient -->
     <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="var(--bg-start)" />
-      <stop offset="100%" stop-color="var(--bg-end)" />
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E293B" />
     </linearGradient>
 
-    <!-- Node Glow Filters -->
-    <filter id="glow-purple" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="5" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
-
-    <filter id="glow-cyan" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="5" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
-
-    <!-- Active Pulse Gradient -->
+    <!-- Signal Pulse Gradient -->
     <linearGradient id="pulse-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.2" />
+      <stop offset="0%" stop-color="#A855F7" stop-opacity="0.2" />
       <stop offset="50%" stop-color="#38BDF8" stop-opacity="1" />
       <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.2" />
     </linearGradient>
   </defs>
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;700&amp;family=Inter:wght@600;700&amp;display=swap');
-
-    :root {
-      --bg-start: #0B0F19;
-      --bg-end: #111827;
-      --card-border: #1F2937;
-      --grid-color: rgba(255, 255, 255, 0.03);
-      --text-header: #9CA3AF;
-      --code-color: #38BDF8;
-      --synapse-color: rgba(99, 102, 241, 0.15);
-      --node-in: #A855F7;
-      --node-hidden: #6366F1;
-      --node-out: #06B6D4;
-    }
-
-    @media (prefers-color-scheme: light) {
-      :root {
-        --bg-start: #F8FAFC;
-        --bg-end: #F1F5F9;
-        --card-border: #E2E8F0;
-        --grid-color: rgba(0, 0, 0, 0.03);
-        --text-header: #64748B;
-        --code-color: #0284C7;
-        --synapse-color: rgba(99, 102, 241, 0.2);
-        --node-in: #7C3AED;
-        --node-hidden: #4F46E5;
-        --node-out: #0891B2;
-      }
-    }
-
-    .bg { fill: url(#bg-grad); rx: 16px; stroke: var(--card-border); stroke-width: 1px; }
-    .header-text { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2px; fill: var(--text-header); text-anchor: middle; }
-    .code-text { font-family: 'Fira Code', monospace; font-size: 14px; font-weight: 700; fill: var(--code-color); }
-    .synapse { stroke: var(--synapse-color); stroke-width: 1.5; fill: none; }
+    .bg { fill: url(#bg-grad); rx: 16px; stroke: #334155; stroke-width: 1.5px; }
+    .grid-line { stroke: #334155; stroke-width: 1px; stroke-dasharray: 4 4; opacity: 0.6; }
+    .header-title { font-family: system-ui, -apple-system, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 2.5px; fill: #94A3B8; text-anchor: middle; }
+    .code-label { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 14px; font-weight: 700; fill: #38BDF8; }
+    .synapse-line { stroke: rgba(99, 102, 241, 0.22); stroke-width: 1.5; fill: none; }
     
-    /* Animated Synapse Pulse */
-    .pulse-line {
+    .pulse-stream-1 {
       stroke: url(#pulse-grad);
       stroke-width: 2.5;
       fill: none;
-      stroke-dasharray: 20 150;
-      animation: signalFlow 2.5s linear infinite;
+      stroke-dasharray: 30 180;
+      animation: flow1 3s linear infinite;
     }
-    .pulse-line-delayed {
+    .pulse-stream-2 {
       stroke: url(#pulse-grad);
       stroke-width: 2.5;
       fill: none;
-      stroke-dasharray: 20 150;
-      animation: signalFlow 2.5s linear infinite 1.25s;
+      stroke-dasharray: 30 180;
+      animation: flow1 3s linear infinite 1.5s;
     }
 
-    @keyframes signalFlow {
-      0% { stroke-dashoffset: 170; }
+    @keyframes flow1 {
+      0% { stroke-dashoffset: 210; }
       100% { stroke-dashoffset: 0; }
     }
 
-    /* Node animations */
-    .node-pulse {
-      animation: pulseNode 3s ease-in-out infinite alternate;
-    }
-    
-    @keyframes pulseNode {
-      0% { transform: scale(1); opacity: 0.85; }
-      100% { transform: scale(1.15); opacity: 1; }
+    .node-input-glow { fill: #A855F7; opacity: 0.25; animation: pulseGlow 2s ease-in-out infinite alternate; }
+    .node-input-core { fill: #C084FC; }
+
+    .node-hidden-core { fill: #818CF8; }
+
+    .node-output-glow { fill: #06B6D4; opacity: 0.25; animation: pulseGlow 2s ease-in-out infinite alternate 1s; }
+    .node-output-core { fill: #22D3EE; }
+
+    @keyframes pulseGlow {
+      0% { opacity: 0.2; }
+      100% { opacity: 0.5; }
     }
   </style>
 
   <!-- Card Background -->
   <rect x="0" y="0" width="900" height="320" class="bg" />
 
-  <!-- Column Divider Grid Lines -->
-  <line x1="240" y1="20" x2="240" y2="300" stroke="var(--card-border)" stroke-width="1" stroke-dasharray="4 4" opacity="0.6" />
-  <line x1="660" y1="20" x2="660" y2="300" stroke="var(--card-border)" stroke-width="1" stroke-dasharray="4 4" opacity="0.6" />
+  <!-- Column Dividers -->
+  <line x1="240" y1="20" x2="240" y2="300" class="grid-line" />
+  <line x1="660" y1="20" x2="660" y2="300" class="grid-line" />
 
-  <!-- Header Titles -->
-  <text x="140" y="45" class="header-text">INPUT LAYER</text>
-  <text x="450" y="45" class="header-text">HIDDEN LAYERS</text>
-  <text x="760" y="45" class="header-text">OUTPUT LAYER</text>
+  <!-- Section Headers -->
+  <text x="140" y="45" class="header-title">INPUT LAYER</text>
+  <text x="450" y="45" class="header-title">HIDDEN LAYERS</text>
+  <text x="760" y="45" class="header-title">OUTPUT LAYER</text>
 
   <!-- Code Annotations -->
-  <text x="35" y="165" class="code-text" text-anchor="start">compile()</text>
-  <text x="450" y="295" class="code-text" text-anchor="middle">fit(skills, epochs=∞)</text>
-  <text x="865" y="165" class="code-text" text-anchor="end">predict()</text>
+  <text x="35" y="165" class="code-label" text-anchor="start">compile()</text>
+  <text x="450" y="295" class="code-label" text-anchor="middle">fit(skills, epochs=∞)</text>
+  <text x="865" y="165" class="code-label" text-anchor="end">predict()</text>
 
-  <!-- SYNAPSES (Connections) -->
-  <g class="synapses-group">
-    <!-- Input (140) to Hidden 1 (350) -->
-    <line x1="140" y1="100" x2="350" y2="80" class="synapse" />
-    <line x1="140" y1="100" x2="350" y2="133" class="synapse" />
-    <line x1="140" y1="100" x2="350" y2="186" class="synapse" />
-    <line x1="140" y1="100" x2="350" y2="240" class="synapse" />
+  <!-- Synapses (Lines between nodes) -->
+  <g>
+    <!-- Input (X=140) -> Hidden 1 (X=350) -->
+    <line x1="140" y1="100" x2="350" y2="80" class="synapse-line" />
+    <line x1="140" y1="100" x2="350" y2="133" class="synapse-line" />
+    <line x1="140" y1="100" x2="350" y2="186" class="synapse-line" />
+    <line x1="140" y1="100" x2="350" y2="240" class="synapse-line" />
 
-    <line x1="140" y1="160" x2="350" y2="80" class="synapse" />
-    <line x1="140" y1="160" x2="350" y2="133" class="synapse" />
-    <line x1="140" y1="160" x2="350" y2="186" class="synapse" />
-    <line x1="140" y1="160" x2="350" y2="240" class="synapse" />
+    <line x1="140" y1="160" x2="350" y2="80" class="synapse-line" />
+    <line x1="140" y1="160" x2="350" y2="133" class="synapse-line" />
+    <line x1="140" y1="160" x2="350" y2="186" class="synapse-line" />
+    <line x1="140" y1="160" x2="350" y2="240" class="synapse-line" />
 
-    <line x1="140" y1="220" x2="350" y2="80" class="synapse" />
-    <line x1="140" y1="220" x2="350" y2="133" class="synapse" />
-    <line x1="140" y1="220" x2="350" y2="186" class="synapse" />
-    <line x1="140" y1="220" x2="350" y2="240" class="synapse" />
+    <line x1="140" y1="220" x2="350" y2="80" class="synapse-line" />
+    <line x1="140" y1="220" x2="350" y2="133" class="synapse-line" />
+    <line x1="140" y1="220" x2="350" y2="186" class="synapse-line" />
+    <line x1="140" y1="220" x2="350" y2="240" class="synapse-line" />
 
-    <!-- Hidden 1 (350) to Hidden 2 (550) -->
-    <line x1="350" y1="80" x2="550" y2="80" class="synapse" />
-    <line x1="350" y1="80" x2="550" y2="133" class="synapse" />
-    <line x1="350" y1="80" x2="550" y2="186" class="synapse" />
-    <line x1="350" y1="80" x2="550" y2="240" class="synapse" />
+    <!-- Hidden 1 (X=350) -> Hidden 2 (X=550) -->
+    <line x1="350" y1="80" x2="550" y2="80" class="synapse-line" />
+    <line x1="350" y1="80" x2="550" y2="133" class="synapse-line" />
+    <line x1="350" y1="80" x2="550" y2="186" class="synapse-line" />
+    <line x1="350" y1="80" x2="550" y2="240" class="synapse-line" />
 
-    <line x1="350" y1="133" x2="550" y2="80" class="synapse" />
-    <line x1="350" y1="133" x2="550" y2="133" class="synapse" />
-    <line x1="350" y1="133" x2="550" y2="186" class="synapse" />
-    <line x1="350" y1="133" x2="550" y2="240" class="synapse" />
+    <line x1="350" y1="133" x2="550" y2="80" class="synapse-line" />
+    <line x1="350" y1="133" x2="550" y2="133" class="synapse-line" />
+    <line x1="350" y1="133" x2="550" y2="186" class="synapse-line" />
+    <line x1="350" y1="133" x2="550" y2="240" class="synapse-line" />
 
-    <line x1="350" y1="186" x2="550" y2="80" class="synapse" />
-    <line x1="350" y1="186" x2="550" y2="133" class="synapse" />
-    <line x1="350" y1="186" x2="550" y2="186" class="synapse" />
-    <line x1="350" y1="186" x2="550" y2="240" class="synapse" />
+    <line x1="350" y1="186" x2="550" y2="80" class="synapse-line" />
+    <line x1="350" y1="186" x2="550" y2="133" class="synapse-line" />
+    <line x1="350" y1="186" x2="550" y2="186" class="synapse-line" />
+    <line x1="350" y1="186" x2="550" y2="240" class="synapse-line" />
 
-    <line x1="350" y1="240" x2="550" y2="80" class="synapse" />
-    <line x1="350" y1="240" x2="550" y2="133" class="synapse" />
-    <line x1="350" y1="240" x2="550" y2="186" class="synapse" />
-    <line x1="350" y1="240" x2="550" y2="240" class="synapse" />
+    <line x1="350" y1="240" x2="550" y2="80" class="synapse-line" />
+    <line x1="350" y1="240" x2="550" y2="133" class="synapse-line" />
+    <line x1="350" y1="240" x2="550" y2="186" class="synapse-line" />
+    <line x1="350" y1="240" x2="550" y2="240" class="synapse-line" />
 
-    <!-- Hidden 2 (550) to Output (760) -->
-    <line x1="550" y1="80" x2="760" y2="120" class="synapse" />
-    <line x1="550" y1="80" x2="760" y2="200" class="synapse" />
+    <!-- Hidden 2 (X=550) -> Output (X=760) -->
+    <line x1="550" y1="80" x2="760" y2="120" class="synapse-line" />
+    <line x1="550" y1="80" x2="760" y2="200" class="synapse-line" />
 
-    <line x1="550" y1="133" x2="760" y2="120" class="synapse" />
-    <line x1="550" y1="133" x2="760" y2="200" class="synapse" />
+    <line x1="550" y1="133" x2="760" y2="120" class="synapse-line" />
+    <line x1="550" y1="133" x2="760" y2="200" class="synapse-line" />
 
-    <line x1="550" y1="186" x2="760" y2="120" class="synapse" />
-    <line x1="550" y1="186" x2="760" y2="200" class="synapse" />
+    <line x1="550" y1="186" x2="760" y2="120" class="synapse-line" />
+    <line x1="550" y1="186" x2="760" y2="200" class="synapse-line" />
 
-    <line x1="550" y1="240" x2="760" y2="120" class="synapse" />
-    <line x1="550" y1="240" x2="760" y2="200" class="synapse" />
+    <line x1="550" y1="240" x2="760" y2="120" class="synapse-line" />
+    <line x1="550" y1="240" x2="760" y2="200" class="synapse-line" />
   </g>
 
-  <!-- ACTIVE ANIMATED PULSE PATHS -->
-  <g class="pulses-group">
-    <path d="M 140 100 L 350 133 L 550 133 L 760 120" class="pulse-line" />
-    <path d="M 140 160 L 350 186 L 550 186 L 760 200" class="pulse-line-delayed" />
-    <path d="M 140 220 L 350 80 L 550 80 L 760 120" class="pulse-line" />
+  <!-- Animated Data Streams -->
+  <g>
+    <path d="M 140 100 L 350 133 L 550 133 L 760 120" class="pulse-stream-1" />
+    <path d="M 140 160 L 350 186 L 550 186 L 760 200" class="pulse-stream-2" />
+    <path d="M 140 220 L 350 80 L 550 80 L 760 120" class="pulse-stream-1" />
   </g>
 
-  <!-- NODES -->
   <!-- Input Layer Nodes -->
-  <g class="nodes-input" filter="url(#glow-purple)">
-    <circle cx="140" cy="100" r="10" fill="var(--node-in)" class="node-pulse" />
-    <circle cx="140" cy="160" r="10" fill="var(--node-in)" class="node-pulse" />
-    <circle cx="140" cy="220" r="10" fill="var(--node-in)" class="node-pulse" />
+  <g>
+    <circle cx="140" cy="100" r="18" class="node-input-glow" />
+    <circle cx="140" cy="100" r="10" class="node-input-core" />
+
+    <circle cx="140" cy="160" r="18" class="node-input-glow" />
+    <circle cx="140" cy="160" r="10" class="node-input-core" />
+
+    <circle cx="140" cy="220" r="18" class="node-input-glow" />
+    <circle cx="140" cy="220" r="10" class="node-input-core" />
   </g>
 
   <!-- Hidden Layer 1 Nodes -->
-  <g class="nodes-hidden-1">
-    <circle cx="350" cy="80" r="8" fill="var(--node-hidden)" />
-    <circle cx="350" cy="133" r="8" fill="var(--node-hidden)" />
-    <circle cx="350" cy="186" r="8" fill="var(--node-hidden)" />
-    <circle cx="350" cy="240" r="8" fill="var(--node-hidden)" />
+  <g>
+    <circle cx="350" cy="80" r="8" class="node-hidden-core" />
+    <circle cx="350" cy="133" r="8" class="node-hidden-core" />
+    <circle cx="350" cy="186" r="8" class="node-hidden-core" />
+    <circle cx="350" cy="240" r="8" class="node-hidden-core" />
   </g>
 
   <!-- Hidden Layer 2 Nodes -->
-  <g class="nodes-hidden-2">
-    <circle cx="550" cy="80" r="8" fill="var(--node-hidden)" />
-    <circle cx="550" cy="133" r="8" fill="var(--node-hidden)" />
-    <circle cx="550" cy="186" r="8" fill="var(--node-hidden)" />
-    <circle cx="550" cy="240" r="8" fill="var(--node-hidden)" />
+  <g class="node-hidden-core">
+    <circle cx="550" cy="80" r="8" />
+    <circle cx="550" cy="133" r="8" />
+    <circle cx="550" cy="186" r="8" />
+    <circle cx="550" cy="240" r="8" />
   </g>
 
   <!-- Output Layer Nodes -->
-  <g class="nodes-output" filter="url(#glow-cyan)">
-    <circle cx="760" cy="120" r="11" fill="var(--node-out)" class="node-pulse" />
-    <circle cx="760" cy="200" r="11" fill="var(--node-out)" class="node-pulse" />
+  <g>
+    <circle cx="760" cy="120" r="20" class="node-output-glow" />
+    <circle cx="760" cy="120" r="11" class="node-output-core" />
+
+    <circle cx="760" cy="200" r="20" class="node-output-glow" />
+    <circle cx="760" cy="200" r="11" class="node-output-core" />
   </g>
 </svg>
