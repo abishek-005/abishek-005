@@ -3,11 +3,17 @@
 </p>
 
 <p align="center">
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=6366F1&center=true&vcenter=true&width=600&lines=Self-Taught+Programmer+%26+AI+Enthusiast;Transforming+Data+into+Decisions;Building+Intelligent+Systems+%26+Mobile+Apps" alt="Typing SVG" />
+  </a>
+</p>
+
+<p align="center">
   <a href="https://www.linkedin.com/in/abishek-kishan/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-Abishek%20Kishan-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+    <img src="https://img.shields.io/badge/LinkedIn-Abishek%20Kishan-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
   <a href="https://instagram.com/ssj.ak_abishek" target="_blank">
-    <img src="https://img.shields.io/badge/Instagram-@ssj.ak_abishek-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" />
+    <img src="https://img.shields.io/badge/Instagram-@ssj.ak__abishek-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" />
   </a>
   <a href="mailto:ak.abishek005@gmail.com">
     <img src="https://img.shields.io/badge/Gmail-ak.abishek005@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail" />
@@ -19,45 +25,65 @@
 ## 🚀 About Me
 
 <p align="center">
-  <img src="neural_net.svg" width="100%" alt="AI &amp; ML Neural Network Model" />
+  <img src="neural_net.svg" width="100%" alt="AI & ML Neural Network Model" />
 </p>
+
+I am a self-taught programmer who loves coding in creative ways. My goal is to design and develop intelligent AI systems that turn complex data into actionable decisions.
 
 ### 🧠 System Architecture
 
-* 🔍 **`model.compile(optimizer='curiosity')`**
-  I dive deep into the architecture of Intelligent Systems, exploring how neural networks and algorithms actually function under the hood rather than just treating them as black boxes.
+```python
+class Developer(Human):
+    def __init__(self):
+        self.name = "Abishek Kishan A"
+        self.role = "AI & ML Enthusiast | Developer"
+        self.passions = ["Machin Learning","Deep Learning", "Computer Vision", "App Development"]
+        
+    def compile_mindset(self):
+        return model.compile(
+            optimizer='curiosity',
+            loss='continuous_learning',
+            metrics=['creativity', 'problem_solving']
+        )
+```
 
-* 💻 **`model.fit(skills)`**
-  Actively training my brain and building AI models from scratch. Proficient in Python, Deep Learning, and NLP, with hands-on experience using TensorFlow and Keras.
-
-* 🚀 **`model.predict(future)`**
-  Focused on bridging the gap between core AI and functional applications (sometimes wrapping them up with Flutter!). I love simplifying complex tech and deploying it into real-world projects and ventures.
+* 🔍 **`model.compile(optimizer='curiosity')`**: I dive deep into the architecture of Intelligent Systems, exploring how neural networks and algorithms function under the hood.
+* ⚡ **`model.fit(experience, knowledge, epochs=float('inf'))`**: Continuously upgrading my skill set by experimenting, training models, and building end-to-end applications.
 
 ---
 
 ## 🛠️ Languages & Tools
 
+| Domain | Technologies & Frameworks | Focus & Description |
+| :--- | :--- | :--- |
+| 🎨 **Frontend** | ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white) | Web Page Structure, Semantic Layouts & Responsive UI Styling |
+| ⚙️ **Backend** | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) | Server Logic, Data Processing, Automation & Scripting |
+| 🤖 **AI / ML** | ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white) ![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white) ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white) ![Scikit-Learn](https://img.shields.io/badge/scikit--learn-F79A3E?style=flat-square&logo=scikit-learn&logoColor=white) | Deep Learning Models, Neural Networks, Data Analysis & Machine Learning |
+| 📱 **Mobile App** | ![Dart](https://img.shields.io/badge/Dart-0175C2?style=flat-square&logo=dart&logoColor=white) ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white) | Cross-Platform Mobile Application Development |
+
+---
+
+## 📊 GitHub Stats & Metrics
+
 <p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=py,js,ts,html,css,nodejs,flask,cpp,tensorflow,keras,dart,flutter,firebase,git,github,vscode,figma&perline=10" />
-  </a>
+  <img src="https://github-profile-trophy.vercel.app/?username=abishek-005&theme=onedark&no-frame=true&column=6" alt="Abishek's GitHub Trophies" />
+</p>
+
+<br/>
+
+<p align="center">
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=abishek-005&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="Abishek's GitHub Stats" />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=abishek-005&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=abishek-005&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
 </p>
 
 ---
 
-## 📈 GitHub Metrics
-
-<table align="center" border="0" cellpadding="0" cellspacing="0">
-    <td colspan="2" align="center" valign="top">
-      <br />
-      <a href="https://git.io/streak-stats">
-        <img src="https://streak-stats.demolab.com?user=abishek-005&theme=radical&hide_border=true" width="100%" alt="GitHub Streak" />
-      </a>
-    </td>
-  </tr>
-</table>
-
----
 <p align="center">
-  <img src="footer.svg" width="100%" alt="Footer Wave Divider" />
+  <i>"Transforming Data into Decisions | Building Intelligent Systems"</i>
+  <br/>
+  ⭐️ Built by <a href="https://github.com/abishek-005">Abishek Kishan A</a>
 </p>
