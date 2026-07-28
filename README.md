@@ -65,24 +65,10 @@ class Developer(Human):
 
 ## 📊 GitHub Stats & Metrics
 
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=abishek-005&theme=onedark&no-frame=true&column=6" alt="Abishek's GitHub Trophies" />
-</p>
+[![Abishek's GitHub Trophies](https://github-profile-trophy-liard-delta.vercel.app/?username=abishek-005&theme=onedark&no-frame=true&column=6)](https://github.com/abishek-005)
 
-<br/>
 
-[![GitHub Streak](https://streak-stats.demolab.com/abishek-005=DenverCoder1)](https://git.io/streak-stats)
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=abishek-005&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
-</p>
+[![GitHub Streak](https://streak-stats.demolab.com/?user=abishek-005&theme=tokyonight&hide_border=true)](https://git.io/streak-stats)
 
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=abishek-005&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
-</p>
 
 ---
-
-<p align="center">
-  <i>"Transforming Data into Decisions | Building Intelligent Systems"</i>
-  <br/>
-  ⭐️ Built by <a href="https://github.com/abishek-005">Abishek Kishan A</a>
-</p>
