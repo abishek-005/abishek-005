@@ -65,9 +65,15 @@ class Developer(Human):
 
 ## 📊 GitHub Stats & Metrics
 
-[![Abishek's GitHub Trophies](https://github-profile-trophy-liard-delta.vercel.app/?username=abishek-005&theme=onedark&no-frame=true&column=6)](https://github.com/abishek-005)
+<p align="center">
+  <a href="https://github.com/abishek-005">
+    <img src="https://github-profile-trophy-liard-delta.vercel.app/?username=abishek-005&theme=onedark&no-frame=true&column=6" alt="Abishek's GitHub Trophies" />
+  </a>
+</p>
 
-[![GitHub Streak](https://streak-stats.demolab.com/?user=abishek-005&theme=tokyonight&hide_border=true)](https://git.io/streak-stats)
+<p align="center">
+  <img src="https://streak-stats.demolab.com/?user=abishek-005&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
+</p>
 
 
 ---
