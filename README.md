@@ -67,7 +67,6 @@ class Developer(Human):
 
 [![Abishek's GitHub Trophies](https://github-profile-trophy-liard-delta.vercel.app/?username=abishek-005&theme=onedark&no-frame=true&column=6)](https://github.com/abishek-005)
 
-
 [![GitHub Streak](https://streak-stats.demolab.com/?user=abishek-005&theme=tokyonight&hide_border=true)](https://git.io/streak-stats)
 
 
