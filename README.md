@@ -61,7 +61,7 @@ class Developer(Human):
 
 ## 🚀 Featured Projects
 
-### 🧠 [NumBase Visualizer](https://github.com/abishek-005/Numbase-Visualiation)
+### 🧠 [NumBase Visualizer](https://numbase-visualiation.vercel.app/)[Live Demo]
 
 An interactive, step-by-step visual learning tool designed to help students master conversions between Decimal (Base 10), Binary (Base 2), Octal (Base 8), and Hexadecimal (Base 16) using authentic whiteboard mathematical methods
 
@@ -69,7 +69,7 @@ An interactive, step-by-step visual learning tool designed to help students mast
 
 ---
 
-### 📱 [Loitering Detection](https://github.com/abishek-005/LOITERING-DETECTION-/tree/updated-code)
+### 📱 [Loitering Detection](https://github.com/abishek-005/LOITERING-DETECTION-/tree/updated-code)[Repo]
 
 An advanced, real-time smart surveillance system built using Streamlit. This application integrates YOLOv8 for precise object detection, Deep SORT for multi-object tracking, and MediaPipe for full-body pose estimation to autonomously flag loitering behavior.
 
