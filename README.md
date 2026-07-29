@@ -65,11 +65,21 @@ class Developer(Human):
 
 ## 📊 GitHub Stats & Metrics
 
-<p align="center">
-  <a href="https://github.com/abishek-005">
-    <img src="https://github-profile-trophy-liard-delta.vercel.app/?username=abishek-005&theme=onedark&no-frame=true&column=6" alt="Abishek's GitHub Trophies" />
+📊 GitHub Activity & Insights
+<div align="center">
+<a href="https://github.com/kittyboy06">
+    <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=abishek-005&amp;theme=tokyonight" alt="Afsal's GitHub Profile Details"/>
   </a>
-</p>
+  <a href="https://github.com/abishek-005">
+    <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=abishek-005&amp;theme=tokyonight" alt="Repos Per Language"/>
+  </a>
+<br/><br/>
+<a href="https://github.com/abishek-005">
+    <img src="https://streak-stats.demolab.com/?user=abishek-00506&amp;theme=tokyonight" alt="GitHub Streak Stats"/>
+  </a>
+</div>
+<br/>
+
 
 <p align="center">
   <img src="https://streak-stats.demolab.com/?user=abishek-005&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
