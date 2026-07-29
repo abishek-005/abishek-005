@@ -74,10 +74,4 @@ class Developer(Human):
 </div>
 <br/>
 
-
-<p align="center">
-  <img src="https://streak-stats.demolab.com/?user=abishek-005&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
-</p>
-
-
 ---
