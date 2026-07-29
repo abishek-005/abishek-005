@@ -24,13 +24,7 @@
 
 ## 🚀 About Me
 
-<p align="center">
-  <img src="neural_net.svg" width="100%" alt="AI & ML Neural Network Model" />
-</p>
-
 I am a self-taught programmer who loves coding in creative ways. My goal is to design and develop intelligent AI systems that turn complex data into actionable decisions.
-
-### 🧠 System Architecture
 
 ```python
 class Developer(Human):
