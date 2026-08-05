@@ -43,8 +43,8 @@ class Developer(Human):
         )
 ```
 
-- 🔍 I dive deep into the architecture of intelligent systems — exploring how neural networks and algorithms work under the hood.
-- ⚡ Continuously upgrading my skill set by experimenting, training models, and building end-to-end applications.
+-  I dive deep into the architecture of intelligent systems — exploring how neural networks and algorithms work under the hood.
+- Continuously upgrading my skill set by experimenting, training models, and building end-to-end applications.
 
 ---
 
